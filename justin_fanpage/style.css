@@ -1,0 +1,143 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Poppins:wght@400;600;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #aaffee, #ffccff);
+    color: #333;
+    overflow-x: hidden; /* Hides horizontal scroll caused by animations */
+}
+
+/* Header with Neon Glow Effect */
+header {
+    background-color: #ff0080;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(255, 0, 128, 0.4);
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.banner h1 {
+    margin: 0;
+    font-family: 'Fredoka One', cursive;
+    font-size: 3em;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff;
+    }
+}
+
+/* Navigation Bar Enhancements */
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 800;
+    padding: 5px 10px;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #fff;
+    color: #ff4081;
+    transform: scale(1.1);
+}
+
+/* Hero Image with Floating Animation */
+.hero-image {
+    width: 100%;
+    height: auto;
+    opacity: 0.8;
+    animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Gallery Section with Slideshow */
+.gallery {
+    padding: 60px 20px;
+    background-color: #fdf5e6;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+    color: #ff4081;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%; /* Adjusts to the width of the gallery section */
+    margin: auto;
+}
+
+.mySlides {
+    display: block;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    animation: slideshow 32s linear infinite 0s;
+}
+
+@keyframes slideshow {
+    0% { opacity: 0; }
+    8% { opacity: 1; }
+    25% { opacity: 1; }
+    33% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.mySlides:nth-child(1) { animation-delay: 0s; }
+.mySlides:nth-child(2) { animation-delay: 8s; }
+.mySlides:nth-child(3) { animation-delay: 16s; }
+.mySlides:nth-child(4) { animation-delay: 24s; }
+
+/* Contact Section with Pulsing Animation on Links */
+.contact a {
+    color: #ff4081;
+    text-decoration: none;
+    font-weight: 600;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer with More Vibrant Colors */
+footer {
+    background-color: #222;
+    color: #ff4081;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
